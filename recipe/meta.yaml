@@ -1,5 +1,5 @@
 {% set name = "python-docker" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b9d18eb08247c1bb6eaf053ef8005df69398f2ad422b4b5b0e7111b50591e9bb
+  sha256: bc803ab299cdab6f7ed541091fc19f5523ae3284c708f4b554cece8a6739cae4
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Build docker images and interact with registries without docker'
+  summary: Build docker images and interact with registries without docker
   description: |
     A pure python implementation to build docker images without docker
     and provide a python api for interacting with docker registries
