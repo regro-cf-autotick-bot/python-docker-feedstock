@@ -1,5 +1,5 @@
 {% set name = "python-docker" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bc803ab299cdab6f7ed541091fc19f5523ae3284c708f4b554cece8a6739cae4
+  sha256: 72ac524c57b752a64ef42ebd43949859ffe3261179edc97b642e44e6558fb593
 
 build:
   noarch: python
